@@ -14,5 +14,5 @@ def neural_network():
 
 
 if __name__ == "__main__":
-    split_data()
-    neural_network()
+    train_x, test_x, train_y, test_y = split_data()
+    neural_network(train_x, test_x, train_y, test_y)

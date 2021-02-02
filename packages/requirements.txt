@@ -1,1 +1,4 @@
 repackage
+numpy
+pandas
+sklearn

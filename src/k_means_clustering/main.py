@@ -14,5 +14,5 @@ def k_means_clustering():
 
 
 if __name__ == "__main__":
-    split_data()
-    k_means_clustering()
+    train_x, test_x, train_y, test_y = split_data()
+    k_means_clustering(train_x, test_x, train_y, test_y)
