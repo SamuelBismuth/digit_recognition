@@ -17,7 +17,7 @@ from data import split_data
 def best_param(train_x, train_y):
     mlp_gs = MLPClassifier(max_iter=100)
     parameter_space = {
-        'hidden_layer_sizes': [(10, 30, 10), (20,)],
+        'hidden_layer_sizes': [(10, 30, 10), 100],
         'activation': ['tanh', 'relu'],
         'solver': ['sgd', 'adam'],
         'alpha': [0.0001, 0.05],
@@ -29,7 +29,7 @@ def best_param(train_x, train_y):
 
 
 def neural_network(train_x, test_x, train_y, test_y):
-    mlp = MLPClassifier()
+    mlp = MLPClassifier(hidden_layer_sizes=100, activation='tanh', solver='adam', alpha=0.05, learning_rate='adaptive')
     mlp.fit(train_x.tolist(), train_y.tolist())
     print('MLP accuracy: {0}'.format(
         mlp.score(test_x.tolist(), test_y.tolist())))
@@ -37,5 +37,6 @@ def neural_network(train_x, test_x, train_y, test_y):
 
 if __name__ == "__main__":
     train_x, test_x, train_y, test_y = split_data()
-    best_param(train_x, train_y)
+    # best param result: {'activation': 'tanh', 'alpha': 0.05, 'hidden_layer_sizes': 100, 'learning_rate': 'adaptive', 'solver': 'adam'}
+    # best_param(train_x, train_y)
     neural_network(train_x, test_x, train_y, test_y)
