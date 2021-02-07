@@ -2,3 +2,4 @@ repackage
 numpy
 pandas
 sklearn
+matplotlib
