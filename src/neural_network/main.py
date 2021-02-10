@@ -9,6 +9,7 @@ Submitters: Yishay Seroussi 305027948, Samuel Bismuth 342533064.
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import GridSearchCV
+import matplotlib.pyplot as plt
 import repackage
 repackage.up()
 from data import split_data
@@ -31,6 +32,8 @@ def best_param(train_x, train_y):
 def neural_network(train_x, test_x, train_y, test_y):
     mlp = MLPClassifier(hidden_layer_sizes=100, activation='tanh', solver='adam', alpha=0.05, learning_rate='adaptive')
     mlp.fit(train_x.tolist(), train_y.tolist())
+    plt.plot(mlp.loss_curve_)
+    plt.show()
     print('MLP accuracy: {0}'.format(
         mlp.score(test_x.tolist(), test_y.tolist())))
 
