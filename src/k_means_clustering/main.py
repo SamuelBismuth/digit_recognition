@@ -5,6 +5,7 @@ Submitters: Yishay Seroussi 305027948, Samuel Bismuth 342533064.
 
 
 # https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+# https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html
 
 
 from sklearn.cluster import KMeans

@@ -25,7 +25,7 @@ def best_param(train_x, train_y):
 
 
 def KNN(train_x, test_x, train_y, test_y):
-    k = 2  # Arbitrary.
+    k = 3  # By best param function.
     knn = KNeighborsClassifier(n_neighbors = k)
     knn.fit(train_x.tolist(), train_y.tolist())
     print('KNN accuracy: {0}'.format(knn.score(test_x.tolist(), test_y.tolist())))
@@ -33,5 +33,6 @@ def KNN(train_x, test_x, train_y, test_y):
 
 if __name__ == "__main__":
     train_x, test_x, train_y, test_y = split_data()
-    best_param(train_x, train_y)
+    # {'n_neighbors': 3}
+    # best_param(train_x, train_y)
     KNN(train_x, test_x, train_y, test_y)

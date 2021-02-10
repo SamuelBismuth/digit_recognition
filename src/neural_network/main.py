@@ -24,7 +24,7 @@ def best_param(train_x, train_y):
         'learning_rate': ['constant', 'adaptive'],
     }
     clf = GridSearchCV(mlp_gs, parameter_space, n_jobs=-1, cv=5)
-    clf.fit(train_x.to_list(), train_y.tolist())
+    clf.fit(train_x.tolist(), train_y.tolist())
     print(clf.best_params_)
 
 
