@@ -7,11 +7,11 @@ Submitters: Yishay Seroussi 305027948, Samuel Bismuth 342533064.
 # https://www.kaggle.com/sanesanyo/digit-recognition-using-svm-with-98-accuracy
 
 
-from data import split_data
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 import repackage
 repackage.up()
+from data import split_data
 
 
 def best_param(train_x, train_y):
