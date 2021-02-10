@@ -112,6 +112,16 @@ The methodology goes as follows:
 
 ## Neural Network
 
+The NN model used in this project is MLP.
+A multilayer perceptron (MLP) is a class of feedforward artificial neural network. In this project the MLP consists of three layers of nodes. Except for the input nodes, each node is a neuron that uses a nonlinear activation function (tanh in our case). MLP using backpropagation technique for the training.
+At the starting point we used one hidden layer of size=100, activation function=tanh, solver=adam, alpha=0.05, and adaptive learning rate.
+
+### Hypertuning model parameters using GridSearchCV
+
+Using GridSearchCV our goal is to find the optimal values for the hidden layers size, activation function, optimizer, alpha, and the learning rate be constant or adaptive.
+The best values for them are: activation: tanh, alpha: 0.05, hidden_layer_sizes: 100, learning_rate: adaptive, solver: adam.
+Note: because of our limited time and the lack of power provided by our computers, we could only make a few parameter tests. Thus, we belive there are more efficient parameter that we couldn't find.
+ 
 ## KNN
 
 k-Nearest-Neighbors is a supervised machine learning model. Supervised learning is when a model learns from data that is already labeled. A supervised learning model takes in a set of input objects and output values. 
