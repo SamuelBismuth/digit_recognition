@@ -39,6 +39,7 @@ def neural_network(train_x, test_x, train_y, test_y):
     plt.ylabel("loss")
     plt.title("Loss Function")
     plt.show()
+    
 
 if __name__ == "__main__":
     train_x, test_x, train_y, test_y = split_data()
