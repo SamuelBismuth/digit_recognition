@@ -152,6 +152,7 @@ param_grid = {'n_neighbors': np.arange(1, 20)}
 The best value for k appears to be 3, and this is actually verified in the accuracy results.
 
 ## SVM
+
 Support-vector machine is a supervised machine learning model. SVM maps training examples to points in space so as to maximise the width of the gap between the categories, new examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
 At starting point we set the parameters: C=0.1, kernel=linear.
 
