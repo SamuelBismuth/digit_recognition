@@ -1,8 +1,8 @@
-FROM python:3.9
+FROM python:3.8
 
 WORKDIR /digit_recognition
 
-copy packages/requirements.txt .
+COPY packages/requirements.txt .
 
 RUN pip install -r requirements.txt
 
